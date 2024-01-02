@@ -1,0 +1,22 @@
+{
+  "name": "framework-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": ["/src", "/src/style"],
+  "scripts": {
+    "submodulate": "git submodule update --init --recursive",
+    "install-all": "npm install --recursive",
+    "disconnect": "git remote rm origin",
+    "update-project": "git submodule update --recursive --remote",
+    "run-style": "npm run -w scss-boilerplate watch:scss",
+    "run-logic": "npm run -w ts-boilerplate watch:ts ../",
+    "dev": "concurrently \"npm run run-style\" \"npm run run-logic\"",
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
