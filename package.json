@@ -12,7 +12,7 @@
     "run-logic": "npm run -w ts-boilerplate watch:ts ../",
     "dev": "concurrently \"npm run run-style\" \"npm run run-logic\"",
     "build": "",
-    "disconnect": "git remote rm master --recursive",
+    "disconnect": "node initiator.mjs & git remote rm master & git remote rm origin",
     "postinstall": "npm run disconnect"
   },
   "author": "",
