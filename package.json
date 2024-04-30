@@ -3,17 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "workspaces": ["/src", "/src/style"],
+  "workspaces": [
+    "/src",
+    "/src/style"
+  ],
   "scripts": {
     "submodulate": "git submodule update --init --recursive",
     "install-all": "npm install --recursive",
-    "update-project": "git submodule update --recursive --remote",
     "run-style": "npm run -w scss-boilerplate watch:scss",
     "run-logic": "npm run -w ts-boilerplate watch:ts ../",
     "dev": "concurrently \"npm run run-style\" \"npm run run-logic\"",
     "build": "",
-    "disconnect": "node initiator.mjs & git remote rm master & git remote rm origin",
-    "postinstall": "npm run disconnect"
+    "initiator": "node initiator.mjs",
+    "git-init": "git init & git add -A & git commit -m \"Initiation\"",
+    "postinstall": "npm run initiator && npm run git-init"
   },
   "author": "",
   "license": "ISC",
