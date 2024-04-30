@@ -1,6 +1,7 @@
-# .gitignore for 'Dev-project'
+# .gitignore for 'TWR'
 */.gitignore
 */.gitmodules
+.gitmodules
 
 # .gitignore for 'Framework-Boilerplate'
 # Logs.
