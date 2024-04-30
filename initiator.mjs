@@ -17,8 +17,9 @@ unlinkSync(join(__dirname, 'src/style/.gitignore'));
 readFile('./.git/config', { encoding: 'utf-8' }, (err, data) => {
     err
         ? console.log(err)
-        : writeFile('./.git/config', data.slice(data.indexOf(0, '[submodule')), { encoding: 'utf-8' });
+        : writeFile('./.git/config',
+            data.slice(data.indexOf(0, '[submodule')),
+            { encoding: 'utf-8' },
+            // Remove this file.
+            () => unlinkSync('./initiator.mjs'));
 });
-
-// Remove this file.
-unlinkSync('./initiator.mjs');
