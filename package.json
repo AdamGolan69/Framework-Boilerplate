@@ -8,6 +8,7 @@
     "/src/style"
   ],
   "scripts": {
+    "update-project": "git submodule update --recursive --remote",
     "initiate": "git submodule update --init --recursive && npm install --recursive",
     "postinstall": "node initiator.mjs && git init && git add -A && git commit -m \"Initiation\"",
     "run-style": "npm run -w scss-boilerplate watch:scss",
