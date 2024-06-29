@@ -31,6 +31,6 @@
         "@app/*": ["app/*"],
       }
     },
-    "include": ["src", "vite.config.ts"]
+    "include": ["src", "vite.config.mts"]
   }
   
